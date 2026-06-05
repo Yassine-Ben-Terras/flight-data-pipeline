@@ -1,0 +1,12 @@
+.git
+.env
+.secrets
+credentials*.json
+.venv
+.localdeps
+**/__pycache__
+**/target
+**/logs
+artifacts
+
+**/.user.yml

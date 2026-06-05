@@ -1,0 +1,6 @@
+# Optional: expose PostgreSQL only on loopback for local SQL/dbt development.
+# docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d postgres
+services:
+  postgres:
+    ports:
+      - 127.0.0.1:55432:5432
