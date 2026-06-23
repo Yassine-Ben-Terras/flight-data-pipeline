@@ -1,0 +1,15 @@
+name: flight_analytics
+version: '1.0.0'
+config-version: 2
+profile: flight_analytics
+model-paths: [models]
+seed-paths: [seeds]
+test-paths: [tests]
+models:
+  flight_analytics:
+    +materialized: view
+    staging:
+      +materialized: incremental
+seeds:
+  flight_analytics:
+    +quote_columns: false

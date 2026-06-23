@@ -1,0 +1,11 @@
+version: 2
+sources:
+  - name: landing
+    schema: public
+    tables:
+      - name: raw_flight_states
+        loaded_at_field: ingested_at
+        freshness:
+          warn_after: {count: 5, period: minute}
+          error_after: {count: 15, period: minute}
+      - name: flight_current

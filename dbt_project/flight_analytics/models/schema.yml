@@ -1,0 +1,38 @@
+version: 2
+models:
+  - name: stg_flight_states
+    description: Deduplicated observations; speeds in m/s, heights in meters, timestamps UTC.
+    columns:
+      - name: icao24
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_aircraft')
+              field: icao24
+      - name: position_at
+        data_tests: [not_null]
+      - name: on_ground
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+              quote: false
+      - name: source
+        data_tests:
+          - accepted_values:
+              values: [demo, live]
+  - name: dim_aircraft
+    columns:
+      - name: icao24
+        data_tests: [unique, not_null]
+  - name: dim_airlines
+    columns:
+      - name: callsign_prefix
+        data_tests: [unique, not_null]
+  - name: mart_daily_flight_activity
+    columns:
+      - name: airline_code
+        data_tests:
+          - relationships:
+              to: ref('dim_airlines')
+              field: callsign_prefix

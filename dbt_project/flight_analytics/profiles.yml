@@ -1,0 +1,12 @@
+flight_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('PGHOST', 'postgres') }}"
+      user: "{{ env_var('PGUSER', 'pipeline') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD') }}"
+      port: "{{ env_var('PGPORT', '5432') | int }}"
+      dbname: "{{ env_var('PGDATABASE', 'flight_warehouse') }}"
+      schema: analytics
+      threads: 2
