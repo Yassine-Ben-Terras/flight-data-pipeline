@@ -1,0 +1,150 @@
+[
+  {
+    "code": "ACA",
+    "name": "Air Canada",
+    "prefixes": [
+      "ACA"
+    ]
+  },
+  {
+    "code": "CCA",
+    "name": "Air China",
+    "prefixes": [
+      "CCA"
+    ]
+  },
+  {
+    "code": "ASA",
+    "name": "Alaska Airlines",
+    "prefixes": [
+      "ASA"
+    ]
+  },
+  {
+    "code": "ANA",
+    "name": "All Nippon Airways",
+    "prefixes": [
+      "ANA"
+    ]
+  },
+  {
+    "code": "AAL",
+    "name": "American Airlines",
+    "prefixes": [
+      "AAL"
+    ]
+  },
+  {
+    "code": "BAW",
+    "name": "British Airways",
+    "prefixes": [
+      "BAW"
+    ]
+  },
+  {
+    "code": "CES",
+    "name": "China Eastern",
+    "prefixes": [
+      "CES"
+    ]
+  },
+  {
+    "code": "CSN",
+    "name": "China Southern",
+    "prefixes": [
+      "CSN"
+    ]
+  },
+  {
+    "code": "DAL",
+    "name": "Delta Air Lines",
+    "prefixes": [
+      "DAL"
+    ]
+  },
+  {
+    "code": "EZY",
+    "name": "easyJet",
+    "prefixes": [
+      "EZY",
+      "EJU",
+      "EZS"
+    ]
+  },
+  {
+    "code": "UAE",
+    "name": "Emirates",
+    "prefixes": [
+      "UAE"
+    ]
+  },
+  {
+    "code": "IGO",
+    "name": "IndiGo",
+    "prefixes": [
+      "IGO"
+    ]
+  },
+  {
+    "code": "LAN",
+    "name": "LATAM Airlines",
+    "prefixes": [
+      "LAN",
+      "TAM",
+      "LPE",
+      "LNE",
+      "LXP"
+    ]
+  },
+  {
+    "code": "DLH",
+    "name": "Lufthansa",
+    "prefixes": [
+      "DLH"
+    ]
+  },
+  {
+    "code": "QTR",
+    "name": "Qatar Airways",
+    "prefixes": [
+      "QTR"
+    ]
+  },
+  {
+    "code": "RYR",
+    "name": "Ryanair",
+    "prefixes": [
+      "RYR"
+    ]
+  },
+  {
+    "code": "SWA",
+    "name": "Southwest Airlines",
+    "prefixes": [
+      "SWA"
+    ]
+  },
+  {
+    "code": "THY",
+    "name": "Turkish Airlines",
+    "prefixes": [
+      "THY"
+    ]
+  },
+  {
+    "code": "UAL",
+    "name": "United Airlines",
+    "prefixes": [
+      "UAL"
+    ]
+  },
+  {
+    "code": "WZZ",
+    "name": "Wizz Air",
+    "prefixes": [
+      "WZZ",
+      "WMT",
+      "WUK"
+    ]
+  }
+]
