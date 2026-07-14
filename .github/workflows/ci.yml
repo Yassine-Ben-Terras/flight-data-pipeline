@@ -1,0 +1,30 @@
+name: Pipeline checks
+on: [push, pull_request]
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    env:
+      SOURCE_MODE: demo
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create local configuration
+        run: |
+          cp .env.example .env
+          mkdir -p .secrets
+      - name: Start demo stack
+        run: docker compose up -d --build
+      - name: Unit and broker/database integration tests
+        run: docker compose --profile test run --rm tests
+      - name: dbt parse and data tests
+        run: |
+          docker compose stop dbt-runner
+          docker compose run --rm --no-deps dbt-runner dbt parse
+          docker compose run --rm --no-deps dbt-runner dbt build
+          docker compose run --rm --no-deps dbt-runner dbt source freshness
+      - name: Diagnostics
+        if: failure()
+        run: docker compose logs --tail 100
+      - name: Cleanup
+        if: always()
+        run: docker compose down -v
